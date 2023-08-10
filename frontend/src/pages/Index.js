@@ -7,9 +7,9 @@ function Index(props) {
     <div>
       <h2>Create a note</h2>
       <Form action="/create" method="post">
-        <input type="input" name="title" placeholder="note title" />
-        <input type="input" name="description" placeholder="note date" />
-        <input type="input" name="category" placeholder="note date" />
+        <input type="input" name="title" placeholder="title" />
+        <input type="input" name="description" placeholder="description" />
+        <input type="input" name="url" placeholder="url" />
         <input type="submit" value="create note" />
       </Form>
 

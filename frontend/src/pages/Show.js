@@ -12,9 +12,9 @@ function Show(props) {
 
     <h2>Update {note.title}</h2>
     <Form action={`/update/${note._id}`} method="post">
-        <input type="text" name="date" placeholder="Note title" defaultValue={note.title}/>
-        <input type="text" name="category" placeholder="Note description" defaultValue={note.description}/>
-        <input type="text" name="description" placeholder="Note url" defaultValue={note.url}/>
+        <input type="text" name="title" placeholder="Note title" defaultValue={note.title}/>
+        <input type="text" name="description" placeholder="description" defaultValue={note.description}/>
+        <input type="text" name="url" placeholder="url" defaultValue={note.url}/>
         <input type="submit" value="Update Note"/>
     </Form>
 
