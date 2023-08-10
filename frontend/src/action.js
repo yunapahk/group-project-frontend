@@ -14,7 +14,7 @@ export const createAction = async ({ request }) => {
       url: formData.get("url"),
     }
     // send the new note to our backend API
-    await fetch(`${ baseURL }/notes`, {
+    await fetch(`${ baseURL }/note`, {
       // tell fetch to make a post request
       method: 'POST',
       headers: {
@@ -40,10 +40,11 @@ export const updateAction = async ({ request, params }) => {
     // build out the updated note object
     const updatedNote = {
       title: formData.get('title'),
-      url: formData.get('url'),
+      description: formData.get('description'),
+      url: formData.get('url')      
     }
     // send the updated note to our backend API
-    await fetch(`${ baseURL }/notes/${id}`, {
+    await fetch(`${ baseURL }/note/${id}`, {
       // tell fetch to make a put request
       method: 'PUT',
       // tell backend the data is JSON
@@ -66,7 +67,7 @@ export const deleteAction = async ({params}) => {
     // grab the id from the params
     const id = params.id
     // send a delete request to our backend API
-    await fetch(`${ baseURL }/notes/${id}`, {
+    await fetch(`${ baseURL }/note/${id}`, {
       // tell fetch to make a delete request
       method: 'DELETE'
       // no headers or body required for delete requests
