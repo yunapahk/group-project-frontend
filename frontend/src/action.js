@@ -10,6 +10,7 @@ export const createAction = async ({ request }) => {
     // match schema from backend
     const newNote = {
       title: formData.get("title"),
+      description: formData.get("description"),
       url: formData.get("url"),
     }
     // send the new note to our backend API

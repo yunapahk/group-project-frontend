@@ -2,7 +2,7 @@ import { baseURL } from './base_url';
 
 export const notesLoader = async () => {
     // make a call to backend index route
-    const response = await fetch(`${baseURL}/notes`)
+    const response = await fetch(`${ baseURL }/notes`)
     // convert the response in a js object
     const notes = await response.json()
     // return the notes
