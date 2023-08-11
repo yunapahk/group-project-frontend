@@ -6,14 +6,13 @@ function Index(props) {
   return (
     <div>
      <div className="createNote"> 
-      <h2 id="createNoteHeader">Create a note</h2>
+      <h2 id="createNoteHeader">Create New Note</h2>
       <Form action="/create" method="post">
         <fieldset>
-          <legend>Enter Information Below</legend>
         <input type="input" name="title" placeholder="title" />
         <input type="input" name="description" placeholder="description" />
         <input type="input" name="url" placeholder="url" />
-        <input type="submit" value="create note" />
+        <input type="submit" value="Done" />
         </fieldset>
       </Form>
       </div>
