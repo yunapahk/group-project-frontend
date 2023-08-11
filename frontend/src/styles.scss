@@ -1,7 +1,7 @@
 // --------------------------
 // VARIABLES
 // --------------------------
-$maincolor: black;
+$maincolor:#5f85fb;
 $contrastcolor: white;
 
 @mixin white-text-black-bg {
@@ -21,7 +21,9 @@ $contrastcolor: white;
 nav {
   @include white-text-black-bg;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
+  border-radius: 10px;
+  
 
   a {
     @include white-text-black-bg;
@@ -29,6 +31,8 @@ nav {
       margin: 10px;
       font-size: large;
     }
+    text-decoration: none;
+
   }
 }
 
