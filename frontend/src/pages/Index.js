@@ -18,7 +18,8 @@ function Index(props) {
       </Form>
       </div>
       <h2>Notes</h2>
-      {notes.map(note => (
+      {notes.map(note => {
+        return (
         <div key={note._id} className="note">
           <Link to={`/${note._id}`}>
             <h1>{note.title}</h1>
@@ -26,7 +27,7 @@ function Index(props) {
           <h3>{note.description}</h3>
           <h3>{note.url}</h3>
         </div>
-      ))}
+  )})}
     </div>
   )
 }
