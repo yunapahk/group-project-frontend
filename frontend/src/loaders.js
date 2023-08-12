@@ -6,6 +6,7 @@ export const notesLoader = async () => {
     // convert the response in a js object
     const notes = await response.json()
     // return the notes
+    console.log(notes)
     return notes
 }
 
@@ -16,6 +17,6 @@ export const noteLoader = async ({params}) => {
   const response = await fetch(`${ baseURL }/note/${id}`)
   // convert the response into a js object
   const note = await response.json()
-  // return the entry
+  // return the note
   return note
 }

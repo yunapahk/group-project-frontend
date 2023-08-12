@@ -1,8 +1,48 @@
-import { useLoaderData, Form } from "react-router-dom";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import ConfirmBox from "../components/ConfirmBox";
+import { useLoaderData, Form, useNavigate } from "react-router-dom";
 
-function Show(props) {
+
+function Show() {
   const note = useLoaderData();
   console.log(note);
+  const [users, setUsers] = useState([]);
+  const [open, setOpen] = useState(false);
+  const [deleteData, setDeleteData] = useState({});
+  const navigate = useNavigate();
+
+  function loadUsers() {
+    axios.get("https://bookmarkd-504g.onrender.com/note/:id").then((res) => {
+      setUsers(res.data.reverse());
+    });
+  }
+
+  useEffect(() => {
+    // loadUsers();
+  }, []);
+
+  const deleteUser = async () => {
+    await axios
+      .delete(`https://bookmarkd-504g.onrender.com/note/${deleteData?._id}`)
+      .then((res) => {
+        // loadUsers();
+        setOpen(false);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+      navigate("/");
+  }
+
+  console.log(deleteData);
+
+  function openDelete(data) {
+    setOpen(true);
+    setDeleteData(data);
+  }
+
 
   return (
     <div className="note">
@@ -27,3 +67,5 @@ function Show(props) {
 }
 
 export default Show;
+
+
