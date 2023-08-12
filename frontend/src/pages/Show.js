@@ -67,7 +67,4 @@ function Show() {
     </div>
   );
 }
-
 export default Show;
-
-
