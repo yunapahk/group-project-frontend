@@ -84,7 +84,6 @@ nav {
   height: 100%;
   z-index: -1;
 }
-
 // List of cards
 .notes {
   width: 40%;
@@ -93,7 +92,6 @@ nav {
   margin: 0 auto;
   border-radius: 20px;
   box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.4);
-
   h2 {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -101,30 +99,26 @@ nav {
     font-size: 2em;
     margin-top: 5rem;
   }
-
   input {
     margin-top: 0.5rem;
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px;
     border: 3px solid black;
     width: 70%;
     height: 1.5rem;
   }
-
   input[value="Done"] {
     width: 30%;
     background-color: rgb(18, 79, 222);
     color: white;
     height: 3rem;
   }
-
   input[value="Delete"] {
     width: 30%;
     background-color: rgb(224, 22, 22);
     color: white;
     height: 3rem;
   }
-
   form {
     display: flex;
     flex-direction: column;
@@ -134,4 +128,32 @@ nav {
     border-radius: 10px;
   }
 }
-
+div.MuiDialogContent-root.css-cu8ovf-MuiDialogContent-root{
+  text-align: center;
+  color: $contrastcolor;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(0, 0, 0);
+  margin: 0 auto;
+  border-radius: 3px;
+}
+a{
+  color: white;
+  background-color: #de1212;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+}
+a:hover{
+  background: white;
+  color: #5F85FB;
+}
+div.Note{
+  justify-content: center;
+}
+div.deleteButton{
+  justify-content: center;
+  padding: 10px;
+  display: flex;
+}
