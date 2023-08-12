@@ -36,7 +36,7 @@ function Show() {
     setDeleteData(data);
   }
   return (
-    <div className="note">
+    <div className="notes">
       <h2>{note.title}</h2>
       <h2>{note.description}</h2>
       <h2>{note.url}</h2>
@@ -45,4 +45,16 @@ function Show() {
         <input type="text" name="title" placeholder="Note title" defaultValue={note.title}/>
         <input type="text" name="description" placeholder="description" defaultValue={note.description}/>
         <input type="text" name="url" placeholder="url" defaultValue={note.url}/>
+        <input type="submit" value="Done"/>
+    </Form>
+
+      <Form action={`/delete/${note._id}`} method="post">
+        <input type="submit" value="Delete"/>
+      </Form>
+    </div>
+  );
+}
+
+export default Show;
+
 
