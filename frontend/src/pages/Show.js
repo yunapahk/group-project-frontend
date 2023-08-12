@@ -60,15 +60,15 @@ function Show() {
         <input type="submit" value="Update Note"/>
         <input type="submit" value="Done"/>
     </Form>
-
-    <h2>Delete Note</h2>
+  <div className="deleteButton" >
     <Link
       onClick={() => openDelete(note)}
       to={"#"}
       className="bg-red-600 text-white px-6 py-2 rounded-lg"
     >
-      Delete
+      Delete Note
     </Link>
+  </div>
 
     <ConfirmBox
         open={open} closeDialog={() => setOpen(false)}

@@ -121,11 +121,12 @@ nav {
 
   input {
     margin-top: 0.5rem;
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px;
     border: 3px solid black;
     width: 70%;
     height: 1.5rem;
+
   }
 
   input[value="Done"] {
@@ -159,4 +160,31 @@ div.MuiDialogContent-root.css-cu8ovf-MuiDialogContent-root{
   background-color: rgb(0, 0, 0);
   margin: 0 auto;
   border-radius: 3px;
+}
+
+
+a{
+  color: white;
+  border: 1px solid #124FDE;
+  background-color: #124FDE;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+}
+
+a:hover{
+  background: white;
+  color: #5f85fb;
+}
+
+div.Note{
+  justify-content: center;
+}
+
+div.deleteButton{
+  justify-content: center;
+  padding: 10px;
+  display: flex;
 }

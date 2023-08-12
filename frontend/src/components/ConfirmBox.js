@@ -44,7 +44,7 @@ function ConfirmBox({ open, closeDialog, title ,deleteFunction}) {
                 flexDirection: "column",
               }}
             >
-              <Typography variant="h5">Delete {title}</Typography>
+              <Typography variant="h5">Delete {title} Note</Typography>
 
               <Typography variant="body1">
                 Are you sure you want to delete this {title} ?
