@@ -15,6 +15,7 @@ export const noteLoader = async ({params}) => {
   const id = params.id
   // make a call to backend show route
   const response = await fetch(`${ baseURL }/note/${id}`)
+  console.log(response)
   // convert the response into a js object
   const note = await response.json()
   // return the note
