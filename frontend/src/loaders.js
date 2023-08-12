@@ -6,6 +6,7 @@ export const notesLoader = async () => {
     // convert the response in a js object
     const notes = await response.json()
     // return the notes
+    console.log(notes)
     return notes
 }
 
