@@ -1,8 +1,8 @@
 // --------------------------
 // VARIABLES
 // --------------------------
-$maincolor:#5f85fb;
-$contrastcolor: white;
+$maincolor:rgb(234, 233, 233);
+$contrastcolor: black;
 
 @mixin white-text-black-bg {
   color: $contrastcolor;
@@ -15,7 +15,7 @@ $contrastcolor: white;
 }
 
 // --------------------------
-// Header
+// CREATE NAVBAR STYLE
 // --------------------------
 
 nav {
@@ -23,8 +23,10 @@ nav {
   display: flex;
   justify-content: space-around;
   border-radius: 10px;
-  
-
+  font-size: 2em;
+  margin: 10px;
+  opacity: 0.6;
+  font-family: Arial, Helvetica, sans-serif;
   a {
     @include white-text-black-bg;
     div {
@@ -32,7 +34,6 @@ nav {
       font-size: large;
     }
     text-decoration: none;
-
   }
 }
 
