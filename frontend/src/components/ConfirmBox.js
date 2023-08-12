@@ -9,11 +9,9 @@ import {
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { forwardRef } from "react";
-
 const Transition = forwardRef(function Transition(props, ref) {
   return <Fade ref={ref} {...props} />;
 });
-
 function ConfirmBox({ open, closeDialog, title ,deleteFunction}) {
   return (
     <Dialog
@@ -33,7 +31,6 @@ function ConfirmBox({ open, closeDialog, title ,deleteFunction}) {
         >
           X
         </IconButton>
-
         <Grid container spacing={6}>
           <Grid item xs={12}>
             <Box
@@ -67,5 +64,4 @@ function ConfirmBox({ open, closeDialog, title ,deleteFunction}) {
     </Dialog>
   );
 }
-
 export default ConfirmBox;
